@@ -1,15 +1,15 @@
 import reverseString from '../src/reverseString';
 
 test('Check if string type', () => {
-  expect(typeof capitalize('string')).toBe('string');
+  expect(typeof reverseString('string')).toBe('string');
 });
 
 test('Check if reversed', () => {
-  expect(capitalize('string')).toBe('gnirts');
-  expect(capitalize('string two')).toBe('owt gnirts');
+  expect(reverseString('string')).toBe('gnirts');
+  expect(reverseString('string two')).toBe('owt gnirts');
 });
 
 test('Check if case sensitive', () => {
-  expect(capitalize('StRing')).toBe('gniRtS');
-  expect(capitalize('strIng tWo')).toBe('oWt gnIrts');
+  expect(reverseString('StRing')).toBe('gniRtS');
+  expect(reverseString('strIng tWo')).toBe('oWt gnIrts');
 });
