@@ -1,0 +1,24 @@
+{
+  "name": "tdd-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "watch": "jest --watch ./tests/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/husky93/tdd-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/husky93/tdd-practice/issues"
+  },
+  "homepage": "https://github.com/husky93/tdd-practice#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.18.10",
+    "jest": "^28.1.3"
+  }
+}
