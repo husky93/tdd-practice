@@ -1,6 +1,6 @@
 import capitalize from '../src/capitalize';
 
-test('Check if string', () => {
+test('Check if string type', () => {
   expect(typeof capitalize('string')).toBe('string');
 });
 
