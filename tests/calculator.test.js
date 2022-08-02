@@ -49,34 +49,34 @@ test('Multiply operates correctly', () => {
   expect(calculator.multiply(6, 2)).toBe(12);
 });
 test('Add method throws error if less then 2 numbers specified', () => {
-  expect(calculator.add(1)).toThrow();
-  expect(calculator.add()).toThrow();
+  expect(() => calculator.add(1)).toThrow();
+  expect(() => calculator.add()).toThrow();
 });
 test('Substract methods throw error if less then 2 numbers specified', () => {
-  expect(calculator.substract(1)).toThrow();
-  expect(calculator.substract()).toThrow();
+  expect(() => calculator.substract(1)).toThrow();
+  expect(() => calculator.substract()).toThrow();
 });
 test('Divide methods throw error if less then 2 numbers specified', () => {
-  expect(calculator.divide(1)).toThrow();
-  expect(calculator.divide()).toThrow();
+  expect(() => calculator.divide(1)).toThrow();
+  expect(() => calculator.divide()).toThrow();
 });
 test('Multiply methods throw error if less then 2 numbers specified', () => {
-  expect(calculator.multiply(1)).toThrow();
-  expect(calculator.multiply()).toThrow();
+  expect(() => calculator.multiply(1)).toThrow();
+  expect(() => calculator.multiply()).toThrow();
 });
 test('Add method throws error if more then 2 numbers specified', () => {
-  expect(calculator.add(1, 6, 4, 7)).toThrow();
-  expect(calculator.add(5, 6, 4, 2)).toThrow();
+  expect(() => calculator.add(1, 6, 4, 7)).toThrow();
+  expect(() => calculator.add(5, 6, 4, 2)).toThrow();
 });
 test('Substract methods throw error if more then 2 numbers specified', () => {
-  expect(calculator.substract(6, 7, 45, 6)).toThrow();
-  expect(calculator.substract(5, 6, 5)).toThrow();
+  expect(() => calculator.substract(6, 7, 45, 6)).toThrow();
+  expect(() => calculator.substract(5, 6, 5)).toThrow();
 });
 test('Divide methods throw error if more then 2 numbers specified', () => {
-  expect(calculator.divide(1, 5, 6, 3)).toThrow();
-  expect(calculator.divide(4, 5, 6)).toThrow();
+  expect(() => calculator.divide(1, 5, 6, 3)).toThrow();
+  expect(() => calculator.divide(4, 5, 6)).toThrow();
 });
 test('Multiply methods throw error if more then 2 numbers specified', () => {
-  expect(calculator.multiply(1, 5, 6, 7, 4)).toThrow();
-  expect(calculator.multiply(3, 4, 5)).toThrow();
+  expect(() => calculator.multiply(1, 5, 6, 7, 4)).toThrow();
+  expect(() => calculator.multiply(3, 4, 5)).toThrow();
 });

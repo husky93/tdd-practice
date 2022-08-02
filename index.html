@@ -1,4 +1,14 @@
-const calculator = (() => {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const calculator = (() => {
   const add = (...args) => {
     if (args.length > 2 || args.length < 2) {
       throw new Error('Too few / too many arguments');
@@ -27,5 +37,7 @@ const calculator = (() => {
 
   return { add, substract, divide, multiply };
 })();
-
-export default calculator;
+    calculator.add(1);
+  </script>
+</body>
+</html>
