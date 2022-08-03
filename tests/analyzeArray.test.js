@@ -34,36 +34,33 @@ test('Returned object has length key', () => {
   }).toBeDefined();
 });
 test('Function calculates correctly', () => {
-  expect(() => {
-    const object = analyzeArray([1, 8, 3, 4, 2, 6]);
-    return object;
-  }).toEqual({
+  const object = analyzeArray([1, 8, 3, 4, 2, 6]);
+  expect(object).toEqual({
     average: 4,
     min: 1,
     max: 8,
     length: 6,
   });
-  expect(() => {
-    const object = analyzeArray([5, 56, 3, 5, 0, 6, 7]);
-    return object;
-  }).toEqual({
-    average: 11.71,
+
+  const objectTwo = analyzeArray([5, 56, 3, 5, 0, 6, 7]);
+  expect(objectTwo).toEqual({
+    average: 12,
     min: 0,
     max: 56,
     length: 7,
   });
 });
 test('Throws error if argument other then array', () => {
-  expect(analyzeArray(1)).toThrow();
-  expect(analyzeArray('hello')).toThrow();
-  expect(analyzeArray({ 1: 1, 2: 4, 4: 5 })).toThrow();
-  expect(analyzeArray(null)).toThrow();
-  expect(analyzeArray(undefined)).toThrow();
-  expect(analyzeArray(true)).toThrow();
+  expect(() => analyzeArray(1)).toThrow();
+  expect(() => analyzeArray('hello')).toThrow();
+  expect(() => analyzeArray({ 1: 1, 2: 4, 4: 5 })).toThrow();
+  expect(() => analyzeArray(null)).toThrow();
+  expect(() => analyzeArray(undefined)).toThrow();
+  expect(() => analyzeArray(true)).toThrow();
 });
 test('Throws error if argument array has other elements then nubmers', () => {
-  expect(analyzeArray([1, 3, 4, 6, [5, 6, 7], 6])).toThrow();
-  expect(analyzeArray([1, 3, '4', 5, '54'])).toThrow();
-  expect(analyzeArray([0, 6, 'hello'])).toThrow();
-  expect(analyzeArray([1, 3, null])).toThrow();
+  expect(() => analyzeArray([1, 3, 4, 6, [5, 6, 7], 6])).toThrow();
+  expect(() => analyzeArray([1, 3, '4', 5, '54'])).toThrow();
+  expect(() => analyzeArray([0, 6, 'hello'])).toThrow();
+  expect(() => analyzeArray([1, 3, null])).toThrow();
 });
