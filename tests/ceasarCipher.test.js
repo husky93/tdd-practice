@@ -32,3 +32,7 @@ test('Throws an error when key value is too big', () => {
   expect(() => ceasarCipher('string', 96)).toThrow();
   expect(() => ceasarCipher('string', 29)).toThrow();
 });
+test('Throws error when arguments have a wrong type', () => {
+  expect(() => ceasarCipher(134, { key: 96 })).toThrow();
+  expect(() => ceasarCipher(['string'], 29)).toThrow();
+});
